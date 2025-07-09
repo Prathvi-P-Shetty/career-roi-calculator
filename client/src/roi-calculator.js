@@ -78,19 +78,19 @@ export default function StandaloneROICalculator() {
           <p className='text-left text-gray-600'>Enter your current annual salary (₹)</p>
         </div>
         <div className="px-2 py-1 bg-blue-50 text-blue-500 w-40 font-medium rounded-lg hover:bg-blue-100 ml-auto cursor-text items-right justify-end">₹
-          <input
-            type="number"
-            value={currentSalary}
+            <input
+              type="number"
+              value={currentSalary}
             onChange={e => setCurrentSalary(e.target.value)}
             onBlur={e => {
-              const value = parseInt(e.target.value);
-              if (value < range.min) setCurrentSalary(range.min.toString());
-              else if (value > range.max) setCurrentSalary(range.max.toString());
-              else setCurrentSalary(value.toString());
-            }}
-            className="text-blue-500 font-medium bg-transparent w-32 text-right focus:outline-none"
-          />
-        </div>
+                const value = parseInt(e.target.value);
+                if (value < range.min) setCurrentSalary(range.min.toString());
+                else if (value > range.max) setCurrentSalary(range.max.toString());
+                else setCurrentSalary(value.toString());
+              }}
+              className="text-blue-500 font-medium bg-transparent w-32 text-right focus:outline-none"
+            />
+          </div>
         <input
           type="range"
           min={range.min}
@@ -108,47 +108,47 @@ export default function StandaloneROICalculator() {
     <div className="max-w-2xl mx-auto bg-white/90 p-8 rounded-2xl shadow-2xl mt-8 mb-4 w-full">
       <h1 className="text-3xl font-extrabold mb-4 text-primary text-center">Standalone ROI Calculator</h1>
       <div className="flex flex-col md:flex-row gap-4 mb-6 justify-center">
-        <button
+                <button 
           className={`px-6 py-2 rounded-lg font-bold shadow transition-all duration-200 border ${selectedCategory === 'IT' ? 'bg-primary text-white' : 'bg-gray-100 text-primary'}`}
           onClick={() => setSelectedCategory('IT')}
         >IT</button>
-        <button
+                <button 
           className={`px-6 py-2 rounded-lg font-bold shadow transition-all duration-200 border ${selectedCategory === 'NonIT' ? 'bg-primary text-white' : 'bg-gray-100 text-primary'}`}
           onClick={() => setSelectedCategory('NonIT')}
         >Non-IT</button>
-        <button
+                <button 
           className={`px-6 py-2 rounded-lg font-bold shadow transition-all duration-200 border ${selectedCategory === 'Fresher' ? 'bg-primary text-white' : 'bg-gray-100 text-primary'}`}
           onClick={() => setSelectedCategory('Fresher')}
         >Fresher</button>
-      </div>
-      {renderSalaryInput()}
+            </div>
+            {renderSalaryInput()}
       <div className="flex flex-col md:flex-row gap-4 mt-6 max-w-2xl mx-auto">
         <div className="flex-1">
           <label className="block font-semibold mb-1 text-primary">Average Hike on Switch (%)</label>
-          <input
-            type="number"
+                  <input
+                    type="number"
             min={5}
             max={100}
             value={hikePercentage}
             onChange={e => setHikePercentage(e.target.value)}
             className="w-full p-2 border rounded focus:outline-accent"
-          />
-        </div>
+              />
+            </div>
         <div className="flex-1">
           <label className="block font-semibold mb-1 text-primary">Work Duration (years)</label>
-          <input
-            type="number"
+                <input
+                  type="number"
             min={1}
             max={20}
             value={workDuration}
             onChange={e => setWorkDuration(e.target.value)}
             className="w-full p-2 border rounded focus:outline-accent"
           />
-        </div>
+          </div>
         <div className="flex-1">
           <label className="block font-semibold mb-1 text-primary">Switch Frequency (years)</label>
-          <input
-            type="number"
+                <input
+                  type="number"
             min={1}
             max={10}
             value={switchFrequency}

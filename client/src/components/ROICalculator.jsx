@@ -345,11 +345,11 @@ export default function ROICalculator({ currentRole, targetRole, currentCTC, set
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div>
           <label className="block text-sm font-semibold mb-1 text-primary">Your Current CTC (in your current role) (₹/year)</label>
-          <input
-            type="number"
+      <input
+        type="number"
             placeholder="Enter your current salary"
             className="w-full p-2 border rounded focus:outline-accent"
-            value={currentCTC}
+        value={currentCTC}
             onChange={handleCurrentCTCChange}
             min={0}
           />
@@ -363,11 +363,11 @@ export default function ROICalculator({ currentRole, targetRole, currentCTC, set
           <label className="block text-sm font-semibold mb-1 text-primary flex items-center gap-1">Expected Salary (as a {targetRole || 'Target Role'}) (₹/year)
             {autoFilled && <span className="text-xs text-accent ml-1">(Auto-calculated)</span>}
           </label>
-          <input
-            type="number"
+      <input
+        type="number"
             placeholder={expectedCTC ? `Suggested: ₹${expectedCTC}` : 'Auto-calculated based on market data'}
             className="w-full p-2 border rounded focus:outline-accent bg-blue-50 text-blue-700 font-semibold"
-            value={expectedCTC}
+        value={expectedCTC}
             onChange={handleExpectedCTCChange}
             min={0}
           />

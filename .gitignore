@@ -1,1 +1,16 @@
-"node_modules/\ndist/\n.env\nclient/node_modules/\nserver/node_modules/" 
+# Ignore Node modules
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# Ignore build folders
+dist/
+client/dist/
+
+# Ignore environment variable files
+.env
+*/.env
+
+# Optional: OS/System-specific files
+.DS_Store
+Thumbs.db

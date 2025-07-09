@@ -63,7 +63,7 @@ const parseSkillsFromAI = (result) => {
   const lines = result.split('\n');
   // If no “Skills to learn” section, split the whole response into lines.
   const skillLines = lines.filter(line =>
-    /^[-*•\d.]/.test(line.trim()) || (line.toLowerCase().includes('skills:') && line.split(':')[1])
+    /^[-*•\d.]/.test(line.trim()) || (line.toLowerCase().includes('skills:') && line.split(':')[1]) 
   );
   // If found, return the clean skill list immediately
   const skills = skillLines.map(line =>
@@ -74,7 +74,7 @@ const parseSkillsFromAI = (result) => {
   if (skills.length === 0) {
     const match2 = result.match(/Skill[s]? Gap[s]?:?([\s\S]*?)\n/);
     if (match2 && match2[1]) {
-      return match2[1].split(/,|\n|\*/).map((s) => s.trim()).filter(Boolean);
+      return match2[1].split(/,|\n|\*/).map((s) => s.trim()).filter(Boolean); 
     }
   }
   return skills;
@@ -117,11 +117,12 @@ export default function SkillGap({ currentRole, targetRole, setGapSkills, freshe
     }
     // Call backend API
     axios
-      .post("http://localhost:5000/api/skillgap", {
+      .post(`${import.meta.env.VITE_BACKEND_URL}/api/skillgap`, {
         currentRole,
         targetRole,
         knownSkills
       })
+      // If the API call succeeds, 
       .then((res) => {
         // Parse skills from AI output
         const skills = parseSkillsFromAI(res.data.result);

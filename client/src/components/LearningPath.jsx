@@ -107,7 +107,7 @@ export default function LearningPath({ currentRole, targetRole, knownSkills, set
 
     // Fetch learning path from API
     axios
-      .post("http://localhost:5000/api/learningpath", {
+      .post(`${import.meta.env.VITE_BACKEND_URL}/api/learningpath`, {
         currentRole,
         targetRole,
         knownSkills: knownSkills || []

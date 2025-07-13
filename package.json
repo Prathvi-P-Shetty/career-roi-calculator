@@ -1,0 +1,35 @@
+{
+  "name": "career-roi-calculator",
+  "version": "1.0.0",
+  "description": "A comprehensive career planning tool that calculates ROI for career transitions using AI-powered skill analysis",
+  "author": "Prathvi P Shetty>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Prathvi-P-Shetty/career-roi-calculator.git"
+  },
+  "keywords": [
+    "career-planning",
+    "roi-calculator",
+    "salary-analysis",
+    "career-transition",
+    "react",
+    "nodejs",
+    "openai",
+    "fullstack"
+  ],
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^16.1.2",
+    "prettier": "^3.6.0"
+  },
+  "scripts": {
+    "format": "prettier --write .",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,css,md}": [
+      "prettier --write"
+    ]
+  }
+}

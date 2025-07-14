@@ -213,7 +213,6 @@ Result: ₹4.5L starting salary with clear growth path
 **Prathvi P Shetty** - Full Stack Developer
 
 [![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Prathvi-P-Shetty)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/prathvi-shetty)
 
 </div>
 
